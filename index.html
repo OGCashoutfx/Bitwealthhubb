@@ -45,8 +45,35 @@
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="password" id="password" placeholder="Password" required>
                 <button type="submit">Register</button>
-                <button type="registration">complete<direct>user
-            <button id="registrationButton" type="button">Complete Registration</button>
+                <<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+<script>
+    // Your Firebase initialization code
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // When the user clicks the registration button, the action is triggered
+    document.getElementById('registrationButton').addEventListener('click', function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // If user is logged in, redirect to dashboard
+                window.location.href = 'dashboard.html'; // Change this to your actual dashboard URL
+            } else {
+                // If user is not logged in, prompt them to register/login
+                alert('Please register or log in to continue.');
+            }
+        });
+    });
+</script>
          
         </section>
     </main>
