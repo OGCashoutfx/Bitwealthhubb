@@ -26,53 +26,80 @@
         const app = firebase.initializeApp(firebaseConfig);
         const analytics = firebase.analytics();
     </script>
-</head>
-<!DOCTYPE html>
+</<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitwealth Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK code here -->
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCXEt-oVUQVo9yxO3_q2FfSTRj_jnBvFAs",
+        authDomain: "bitwealthhubb-6cf1e.firebaseapp.com",
+        projectId: "bitwealthhubb-6cf1e",
+        storageBucket: "bitwealthhubb-6cf1e.firebasestorage.app",
+        messagingSenderId: "1061683607000",
+        appId: "1:1061683607000:web:4150892ad1ed625ccaeead",
+        measurementId: "G-S2DFPNX3MT"
+      };
+      const app = firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Bitwealth Hub</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Register</h2>
-            <form id="register-form">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">Register</button>
-            </form>
-        </section>
-    </main>
+    <!-- Company Info Section -->
+    <section id="company-info">
+      <h2>Welcome to Bitwealth Hub</h2>
+      <p>Unlock the power of BTC investments with Bitwealth Hub. Your trusted platform for high-yield Bitcoin investment strategies, real-time market insights, and expert guidance. Start growing your wealth today!</p>
+    </section>
 
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
-    <script src="app.js"></script>
+    <!-- Why Choose Us Section -->
+    <section id="why-choose">
+      <h3>🚀 Why Choose Bitwealth Hub?</h3>
+      <ul>
+        <li><strong>High-Returns Investment Plans:</strong> Choose from our tailored BTC investment plans.</li>
+        <li><strong>Transparent & Secure:</strong> We prioritize security and transparency in every transaction.</li>
+        <li><strong>24/7 Expert Support:</strong> Our team is here to guide you every step of the way.</li>
+        <li><strong>Personalized Financial Advice:</strong> Get custom strategies based on your investment goals.</li>
+      </ul>
+    </section>
+
+    <!-- Investment Plans Section -->
+    <section id="investment-plans">
+      <h3>💰 Our Investment Plans</h3>
+      <div class="plan">
+        <h4>Starter Plan</h4>
+        <p><strong>Minimum Investment:</strong> $100</p>
+        <p><strong>Weekly Returns:</strong> 5%</p>
+        <p>24/7 Support | Free Market Analysis</p>
+      </div>
+      <div class="plan">
+        <h4>Pro Plan</h4>
+        <p><strong>Minimum Investment:</strong> $500</p>
+        <p><strong>Weekly Returns:</strong> 7%</p>
+        <p>Priority Support | Personalized Investment Guidance</p>
+      </div>
+      <div class="plan">
+        <h4>Elite Plan</h4>
+        <p><strong>Minimum Investment:</strong> $1000+</p>
+        <p><strong>Weekly Returns:</strong> 10%</p>
+        <p>VIP Support | Exclusive Market Insights | Dedicated Account Manager</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <h3>🌐 Features</h3>
+      <ul>
+        <li><strong>Real-Time BTC Market Insights:</strong> Stay ahead with the latest Bitcoin trends.</li>
+        <li><strong>Investment Calculator:</strong> Estimate your returns with our easy-to-use tool.</li>
+        <li><strong>Secure Transactions:</strong> Your investments are protected with top-notch security.</li>
+        <li><strong>Expert Resources:</strong> Access to guides, blogs, and tutorials to improve your investing strategy.</li>
+      </ul>
+    </section>
+
 </body>
 </html>
-
-<!-- Why Choose Bitwealth Hub Section -->
-<section id="why-choose">
-    <h2>🚀 Why Choose Bitwealth Hub?</h2>
-    <ul>
-        <li><strong>High-Returns Investment Plans</strong> – Choose from our tailored BTC investment plans.</li>
-        <li><strong>Transparent & Secure</strong> – We prioritize security and transparency in every transaction.</li>
-        <li><strong>24/7 Expert Support</strong> – Our team is here to guide you every step of the way.</li>
-        <li><strong>Personalized Financial Advice</strong> – Get custom strategies based on your investment goals.</li>
-    </ul>
-</section>
-<!-- Features Section -->
-<section id="features">
-    <h2>🌐 Features</h2>
-    <ul>
-        <li><strong>Real-Time BTC Market Insights</strong> – Stay ahead with the latest Bitcoin trends.</li>
-        <li><strong>Investment Calculator</strong> – Estimate your returns with our easy-to-use tool.</li>
-        <li><strong>Secure Transactions</strong> – Your investments are protected with top-notch security.</li>
-        <li><strong>Expert Resources</strong> – Access to guides, blogs, and tutorials to improve your investing strategy.</li>
-    </ul>
-</section>
